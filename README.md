@@ -1,4 +1,4 @@
-# HiSLR (Hierarchical Sample-specific Label Relationships)
+# HyILR (Hyperbolic Instance-Specific Local Relationships)
 ## Requirements
 - Python>=3.6
 - torch>=1.6.0
@@ -10,11 +10,11 @@
 - After accessing the dataset, run the scripts in the folder `preprocess` for each dataset separately to obtain tokenized version of dataset and the related files. These will be added in the `data/x` folder where x is the name of dataset with possible choices as: wos, bgc, rcv and nyt.
 -  For reference, we have added tokenized versions of the WOS, BGC, and NYT datasets along with their related files in the `data` folder. Due to size constraints in GitHub, we could not upload the tokenized version of the RCV1-V2 dataset, which exceeds 400 MB in size.
 - Detailed steps regarding how to obtain and preprocess each dataset are mentioned in the readme file of `preprocess` folder 
-##  Train HiSLR 
-`python train.py --name t1_hislr --batch 10 --data wos --cl_loss 1  --cl_temp 0.07   --cl_wt 1` </br>
+##  Train HyILR 
+`python train.py --name t1_HyILR --batch 10 --data wos --cl_loss 1  --cl_temp 0.07   --cl_wt 1` </br>
 </br>
 Some Important arguments: </br>
-- `--name` name of directory in which your model will be saved. For e.g. the above model will be saved in `..HiSLR/data/wos/t1_hislr`
+- `--name` name of directory in which your model will be saved. For e.g. the above model will be saved in `..HyILR/data/wos/t1_HyILR`
 - `--batch` batch_size for training. We set it to 10 for all datasets.
 - `--data` name of dataset directory which contains your data and related files. Possible choices are `wos`, `rcv`, `bgc`  and `nyt`.
 - `--cl_loss` Set to 1 for using contrastive loss in Lorentz hyperbolic space
@@ -32,8 +32,8 @@ Some Important arguments: </br>
 In `train.py` set the `--rand_exp 1` to use a random seed for each run of the experiment
 ## Test
 To run the trained model on test set run the script `test.py` </br> 
-`python test.py --name t1_hislr --data wos --extra _macro` </br> </br>
+`python test.py --name t1_HyILR --data wos --extra _macro` </br> </br>
 Some Important arguments
-- `--name` name of the directory which contains the saved checkpoint. The checkpoint is saved in `../HiSLR/data/wos/` when working with WOS dataset
+- `--name` name of the directory which contains the saved checkpoint. The checkpoint is saved in `../HyILR/data/wos/` when working with WOS dataset
 - `--data` name of dataset directory which contains your data and related files
 - `--extra` two checkpoints are kept based on macro-F1 and micro-F1 respectively. The possible choices are  `_macro` and `_micro` to choose from the two checkpoints
