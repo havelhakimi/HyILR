@@ -18,8 +18,7 @@ parser.add_argument('--extra', default='_micro', choices=['_macro', '_micro'], h
 args = parser.parse_args()
 
 
-#def draw_tsne(text,label,truth):
-#    mask = (labels == 1)
+
 
 if __name__ == '__main__':
 
@@ -43,12 +42,12 @@ if __name__ == '__main__':
     label_dict = {i: tokenizer.decode(v, skip_special_tokens=True) for i, v in label_dict.items()}
     hier = torch.load(os.path.join(data_path, 'slot.pt'))
     num_class = len(label_dict)
+    level_dict = torch.load(os.path.join(data_path, 'level_dict.pt'))
 
     dataset = BertDataset(device=device, pad_idx=tokenizer.pad_token_id, data_path=data_path)
 
-    
     model = PLM_MTC(config,num_labels=num_class,backbone=args.backbone,bce_wt=args.bce_wt,curv_init=args.curv_init,
-                    learn_curv=args.learn_curv,cl_loss=args.cl_loss,cl_wt=args.cl_wt,cl_temp=args.cl_temp)
+                    learn_curv=args.learn_curv,cl_loss=args.cl_loss,cl_wt=args.cl_wt,cl_temp=args.cl_temp,level_dict=level_dict,hier=hier )
 
 
     split = torch.load(os.path.join(data_path, 'split.pt'))
