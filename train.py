@@ -93,7 +93,6 @@ parser.add_argument('--device', type=str, default='cuda')
 parser.add_argument('--name', type=str, required=True, help='A name for different runs.')
 parser.add_argument('--update', type=int, default=1, help='Gradient accumulate steps')
 parser.add_argument('--seed', type=int, default=3, help='Seed value')
-parser.add_argument('--rand_exp', type=int, default=0, help='For random runs')
 parser.add_argument('--warmup', default=0, type=int, help='Warmup steps.')
 parser.add_argument('--backbone', default='bert-base-uncased', type=str, choices=['bert-base-uncased','roberta-base'], help='Select backbone')
 parser.add_argument('--bce_wt', type=float, default=1, help='bce_wt.')
@@ -109,8 +108,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     device = args.device
-    if args.rand_exp:
-        args.seed = random.randint(0, 100)
     print(args)
     data=args.data
     seed_torch(args.seed)
