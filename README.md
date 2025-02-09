@@ -19,7 +19,7 @@ Some Important arguments: </br>
 - `--data` name of dataset directory which contains your data and related files. Possible choices are `wos`, `rcv`, `bgc`  and `nyt`.
 - `--cl_loss` Set to 1 for using contrastive loss in Lorentz hyperbolic space
 - `--cl_temp` Temperature for the contarstive loss. We use a value of 0.07 for all datasets
-- `--cl_wt` weight for contrastive loss. We use the following weights for the contrastive loss across datasets: `WOS:0.3` , `RCV1-V2:0.4`, `BGC:0.4`,  and `NYT:1`
+- `--cl_wt` weight for contrastive loss. We use the following weights for the contrastive loss across datasets: `WOS:0.3` , `RCV1-V2:0.4`, `BGC:0.4`,  and `NYT:0.6`
 
 
 ### For Exponential map transformation and Geodesic distance calculation in Lorentz hyeprbolic space
