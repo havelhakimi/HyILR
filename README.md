@@ -28,8 +28,7 @@ Some Important arguments: </br>
 
 ### For Contrastive loss in Lorentz hyperbolic space
 - The code for the contrastive loss is in the script `criterion.py` 
-### For multiple random runs 
-In `train.py` set the `--rand_exp 1` to use a random seed for each run of the experiment
+
 ## Test
 To run the trained model on test set run the script `test.py` </br> 
 `python test.py --name t1_hyilr --data wos --extra _macro` </br> </br>
