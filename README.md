@@ -2,7 +2,7 @@
 ## Requirements
 - Python>=3.6
 - torch>=1.6.0
-- transformers>=4.2.1
+- transformers>=4.30.2
 - numpy>=1.23.0
 
 ## Data
