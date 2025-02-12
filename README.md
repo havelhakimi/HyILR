@@ -27,7 +27,7 @@ Some Important arguments: </br>
 - Specifically we use the functions  `exp_map0()` and `pairwise_dist()` provided in  the script `lorentz.py`
 
 ### For Contrastive loss in Lorentz hyperbolic space
-- The code for the contrastive loss is in the script `criterion.py` 
+- The code for the contrastive loss and **hierarchy-aware negative sampling** is in the script `criterion.py`, where the loss is defined as the PyTorch class `CLLoss`.
 
 ## Test
 To run the trained model on test set run the script `test.py` </br> 
