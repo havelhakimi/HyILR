@@ -138,7 +138,7 @@ class CLloss(torch.nn.Module):
         positive_labels = [torch.nonzero(label).view(-1).tolist() for label in target_labels]
 
         
-        # Find hard negative labels
+        # Hieraarchy-aware negative sampling 
         
         hard_negative_labels_batch = []
         
