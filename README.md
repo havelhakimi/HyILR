@@ -1,7 +1,7 @@
 # HyILR (Hyperbolic Instance-Specific Local Relationships)
 ## Requirements
 - Python>=3.6
-- torch>=1.6.0
+- torch>=1.13.1
 - transformers>=4.30.2
 - numpy>=1.23.0
 
