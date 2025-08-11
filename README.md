@@ -36,3 +36,25 @@ Some Important arguments
 - `--name` name of the directory which contains the saved checkpoint. The checkpoint is saved in `../HyILR/data/wos/` when working with WOS dataset
 - `--data` name of dataset directory which contains your data and related files
 - `--extra` two checkpoints are kept based on macro-F1 and micro-F1 respectively. The possible choices are  `_macro` and `_micro` to choose from the two checkpoints
+
+## Citation
+If you find our work helpful, please cite it using the following BibTeX entry:
+```bibtex
+@inproceedings{kumar-toshniwal-2025-hyilr,
+    title = "{H}y{ILR}: Hyperbolic Instance-Specific Local Relationships for Hierarchical Text Classification",
+    author = "Kumar, Ashish  and
+      Toshniwal, Durga",
+    editor = "Zhao, Jin  and
+      Wang, Mingyang  and
+      Liu, Zhu",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 4: Student Research Workshop)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-srw.63/",
+    doi = "10.18653/v1/2025.acl-srw.63",
+    pages = "872--883",
+    ISBN = "979-8-89176-254-1",
+   
+}
